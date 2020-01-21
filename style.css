@@ -1,0 +1,413 @@
+::-webkit-scrollbar {
+    width: 12px!important;
+    height: 6px!important;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 40px;
+}
+::-webkit-scrollbar-track {
+    background: hsla(0,0%,100%,.08);
+}
+
+#app{
+    position: relative;
+    width: 100%;
+}
+
+body,html{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif !important;
+    color: #4b4b4b;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern";
+    -webkit-font-feature-settings: "kern";
+    -moz-font-feature-settings: "kern";
+    -moz-font-feature-settings: "kern=1";
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: var(--body);
+}
+
+
+.container {
+    position: relative;
+    max-width: 1014px;
+    overflow: hidden;
+    left: 0vw;
+    transform: translate(10%, 0%);
+    height: 500px;
+}
+
+:root {
+    --color1: #b3b5b7;
+    --color2: #2c97de;
+    --color3: #c33535;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    padding: 0px;
+    height: 50px;
+    z-index: 100000000;
+    background: rgba(0, 0, 0, .70);
+}
+
+.header a {
+    font-size: 22px;
+    padding: 15px;
+    position: relative;
+    top: 17px;
+    cursor: pointer;
+}
+
+.color0 {
+    border: 2px solid var(--color1) !important;
+    border-image: -webkit-linear-gradient(bottom, var(--color1), rgba(200, 200, 200, 0)) 20 stretch !important;
+}
+
+.color1 {
+    border: 2px solid var(--color2) !important;
+    border-image: -webkit-linear-gradient(bottom, var(--color2), rgba(200, 200, 200, 0)) 20 stretch !important;
+}
+
+.color2 {
+    border: 2px solid var(--color3) !important;
+    border-image: -webkit-linear-gradient(bottom, var(--color3), rgba(200, 200, 200, 0)) 20 stretch !important;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    max-height: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    font-family: Poppins, sans-serif;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #202020;
+    background-image: url(https://www.csgolive.com/assets/images/background.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #d4d4d4;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.scroll {
+    position: relative;
+    top: 60px;
+    width: 199vw;
+    height: auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, .3);
+    -webkit-box-shadow: 0 3px 9px transparent;
+    box-shadow: 0 3px 9px transparent;
+    background-clip: padding-box;
+    outline: 0;
+    border: 2px solid rgba(17, 17, 17, 1);
+    border-image: -webkit-linear-gradient(bottom, rgba(175, 175, 175, .25), rgba(200, 200, 200, 0)) 20 stretch;
+    overflow: hidden;
+    white-space: nowrap;
+    z-index: 1;
+    left: 0px;
+}
+
+.scroller {
+    transition: 8s cubic-bezier(0.42, 0, 0, 1.05);
+    transform: translateX(0vw);
+}
+
+.item {
+    width: 200px;
+    height: 200px;
+    margin: 10px 0;
+    border: 2px solid #2c97de;
+    border-image: -webkit-linear-gradient(bottom, #2c97de, rgba(200, 200, 200, 0)) 20 stretch;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 0;
+    position: relative;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: auto 70%;
+    -webkit-transition: background-image .3s;
+    transition: background-image .3s;
+    display: inline-block;
+    margin-left: 0vw;
+    left: 320px;
+}
+
+.item img {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+}
+
+.scroll::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 450px;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 7px;
+    top: 50%;
+    background: var(--color2);
+    z-index: 10000;
+}
+
+.open {
+    transition: 1s;
+}
+
+.open button {
+    position: absolute;
+    top: 40%;
+    left: 28.5%;
+    border: none;
+    background: rgba(0, 0, 0, .90);
+    color: #fff;
+    padding: 20px;
+    border: 2px solid #2c97de;
+    border-image: -webkit-linear-gradient(bottom, #2c97de, rgba(200, 200, 200, 0)) 20 stretch;
+    cursor: pointer;
+    z-index: 2000;
+    outline: none;
+}
+
+.open button {
+    position: absolute;
+    top: 178px;
+    left: 150px;
+    border: none;
+    background: rgba(0, 0, 0, .90);
+    color: #fff;
+    padding: 20px;
+    border: 2px solid #2c97de;
+    border-image: -webkit-linear-gradient(bottom, #2c97de, rgba(200, 200, 200, 0)) 20 stretch;
+    cursor: pointer;
+    z-index: 2000;
+    outline: none;
+}
+
+.open::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, .50);
+    left: 0px;
+    top: 0px;
+    z-index: 100;
+}
+
+.gained {
+    background: #000;
+    z-index: 25000;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+}
+
+.gained .ganhou {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.gained .item {
+    left: 10%;
+    top: 0vw;
+}
+
+.gained h1 {
+    font-size: 2ww;
+    top: -3vw;
+    position: relative;
+}
+
+.gained h1,
+.item,
+button {
+    position: relative;
+    z-index: 2000;
+}
+
+.gained button {
+    position: relative;
+    top: 15vw;
+    float: left;
+    border: none;
+    padding: 10px;
+    background: var(--color2);
+    color: #fff;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.saldo {
+    position: relative;
+    padding: 5px;
+    top: 3vw;
+    left: 2vw;
+}
+
+.seus {
+    position: relative;
+    top: 4vw;
+    padding: 40px;
+    max-width: 100%;
+    overflow-y: auto;
+    height: 300px;
+}
+
+.seus .item {
+    margin-left: -18vw;
+    left: 18vw;
+    margin-top: -152px;
+}
+
+.seus .options:hover {
+    opacity: 1;
+}
+
+.seus .options {
+    width: 200px;
+    height: 200px;
+    background: rgba(0, 0, 0, .70);
+    position: relative;
+    top: -213px;
+    left: 0px;
+    z-index: 10000;
+    opacity: 0;
+    margin-left: 0px;
+    transition: 1s;
+    display: table-columninline-block;
+}
+
+.options button {
+    position: absolute;
+    border: none;
+    padding: 10px;
+    background: var(--color2);
+    color: #fff;
+    cursor: pointer;
+    font-size: 17px;
+    bottom: 0px;
+}
+
+.seus h1 {
+    width: 100%;
+    opacity: 0;
+}
+
+.rank {
+    background-image: url(https://cdn.ligadosgames.com/imagens/patentes-cs-go-og.jpg);
+    width: 129px;
+    height: 52px;
+    background-position: -53px -11px;
+    position: relative;
+    top: 57px;
+}
+
+.upgrade{
+    position: relative;
+    width: 100%;
+}
+
+.saldo{
+    z-index: 5000;
+}
+
+.upgrade h1{
+    position: relative;
+    z-index: 2000;
+}
+
+.upgrade .up{
+    position: fixed;
+    width: 100%;
+    height: 50vw;
+    left: 0px;
+    background: rgba(0, 0, 0, .70);
+    top: 20px;
+}
+
+.upgrade .up .item{
+    position: absolute;
+    top: 24vw;
+    left: 6vw;
+    cursor: pointer;
+}
+
+.upgrade .up .status{
+    position: absolute;
+    top: 24vw;
+    left: 40vw;
+    background: var(--color2);
+    width: 17vw;
+    height: 17vw;
+    border-radius: 50%;
+}
+
+.upgrade .yes{
+    background: #2cde8c !important;
+}
+
+.upgrade .no{
+    background: #de2c2c !important;
+}
+
+.upgrade .up .other{
+    position: absolute;
+    left: 71vw;
+    top: 24vw;
+}
+
+.escolher{
+    position: fixed;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    z-index: 50000000000;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.escolher .item{
+    cursor: pointer;
+}
+
+.upgrade button{
+    position: absolute;
+    top: 40%;
+    left: 28.5%;
+    border: none;
+    background: rgba(0, 0, 0, .90);
+    color: #fff;
+    padding: 20px;
+    border: 2px solid #2c97de;
+    border-image: -webkit-linear-gradient(bottom, #2c97de, rgba(200, 200, 200, 0)) 20 stretch;
+    cursor: pointer;
+    z-index: 2000;
+    outline: none;
+}

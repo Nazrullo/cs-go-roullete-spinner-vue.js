@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Csgo open cases simulator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app">
+  <div class="container">
+    <!-- <div class="rank" v-bind:style="'backgroundPosition:' + rankX + 'px ' + rankY + 'px'"></div> -->
+    <div  class="scroll">
+      <div class="scroller" :style="'transform: translateX(' + scroll + 'px)'">
+      <div class="item" v-for="newItem in items" :class="newItem.theme">
+        <img :src="newItem.image">
+      </div>
+       </div>
+       <div class="open" v-if="!open">
+        <button @click="openCases">Старт</button>
+       </div>
+    </div>
+  </div>
+
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script>
+<script  src="./script.js"></script>
+
+</body>
+</html>
